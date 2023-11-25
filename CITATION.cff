@@ -16,3 +16,13 @@ abstract: >-
   handwritten essays and responses, providing instant
   feedback for students, empowering teachers to focus more
   on teaching and less on paperwork.
+
+@misc{OshaPandey,
+  author = {Osha Pandey},
+  title = {checkd-main},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/OshaPandey/checkd-main/tree/d758279a58ad66cc9fcde4e25b387e77a55dbf8a}},
+  commit = {d758279}
+}
