@@ -2,8 +2,6 @@
 
 Clarify is a web app that helps teachers to grade handwritten essays and responses, providing instant feedback for students, empowering teachers to focus more on teaching and less on paperwork.
 
-Open [https://clarify-coral.vercel.app/](https://clarify-coral.vercel.app/) to view the application in your browser.
-
 ![Home page of Clarify](amplify/public/home.png)
 
 ## Inspiration

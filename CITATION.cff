@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: clarify
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Wangdrak Dorji
+    email: wangdrak.dorji@gmail.com
+repository-code: 'https://github.com/wdorji/clarify'
+abstract: >-
+  Clarify is a web app that helps teachers to grade
+  handwritten essays and responses, providing instant
+  feedback for students, empowering teachers to focus more
+  on teaching and less on paperwork.
