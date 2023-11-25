@@ -1,25 +1,15 @@
 "use client";
-import CenterFocusWeakIcon from "@mui/icons-material/CenterFocusWeak";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import { useSession } from "next-auth/react";
-import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { ImagesContext } from "./imagesContextProvider";
 import { uploadImage, getDownloadURL } from "../../storage";
 import { GrDocumentUpload } from "react-icons/gr";
-import SortableList, { SortableItem } from "react-easy-sort";
 import { IoEyeOutline } from "react-icons/io5";
-import { MdOutlineCancel } from "react-icons/md";
 
-import {
-  postOCR,
-  makeCheckRequest,
-  makeGrammarRequest,
-  addDocRequest,
-  getDocRequest,
-} from "../global/httpRequestsUtils";
 import {
   Button,
   Modal,
@@ -34,24 +24,11 @@ import {
   Image,
   HStack,
 } from "@chakra-ui/react";
-import { performRecognition } from "../global/httpRequestsUtils";
-import { arrayMoveImmutable, arrayMoveMutable } from "array-move";
-
-interface OCRResponse {
-  regions: {
-    lines: {
-      words: {
-        text: string;
-      }[];
-    }[];
-  }[];
-}
 
 export default function UploadWidget() {
   const [files, setFiles] = useState<File[]>([]);
   const { images, setImages } = useContext(ImagesContext);
 
-  // const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const session = useSession();
   const router = useRouter();
 
@@ -86,12 +63,6 @@ export default function UploadWidget() {
     onClose();
   };
 
-  // const {
-  //   isOpen: isSecondModalOpen,
-  //   onOpen: onSecondModalOpen,
-  //   onClose: onSecondModalClose,
-  // } = useDisclosure();
-
   const [isSecondModalOpen, setIsOpen] = useState(false);
 
   const onSecondModalClose = () => {
@@ -109,19 +80,6 @@ export default function UploadWidget() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFileTitle(event.target.value);
-  };
-
-  const waitForStringUpdate = async () => {
-    return new Promise<void>((resolve) => {
-      setFileTitle((prevString) => {
-        if (isOpen === false && fileTitle !== "") {
-          // Resolve the promise when the state is updated
-          resolve();
-        }
-        // Return the new state
-        return prevString;
-      });
-    });
   };
 
   const handleImagesUpload = async () => {

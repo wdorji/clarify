@@ -63,7 +63,6 @@ export default async function handler(
 
     res.status(200).json({ status: 200, response_text: responseText });
   } catch (err) {
-    console.log(err);
     res.status(400).json({ error: "OCR processing has failed!" });
   }
 }

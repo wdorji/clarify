@@ -40,11 +40,8 @@ export default async function handler(
       refAnswer,
     } = req.body;
 
-    console.log("reached api");
-
     const requestRef = doc(db, TEACHER_DOCUMENT_COLLECTION, textId);
 
-    console.log("received ref");
     const userDocument: TeacherDocument = {
       imageUrl: imageUrl,
       textName: textName,
@@ -59,8 +56,6 @@ export default async function handler(
       question: question,
     };
 
-    console.log("setting", userDocument);
-
     await updateDoc(requestRef, userDocument);
     let responseText = textId;
 
@@ -72,7 +67,6 @@ export default async function handler(
 
     res.status(200).json({ status: 200, response_text: responseText });
   } catch (err) {
-    console.log(err);
     res.status(400).json({ error: "PaLM processing has failed!" });
   }
 }

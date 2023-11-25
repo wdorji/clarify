@@ -1,8 +1,14 @@
 # Clarify
 
+Clarify is a web app that helps teachers to grade handwritten essays and responses, providing instant feedback for students, empowering teachers to focus more on teaching and less on paperwork.
+
+Open [https://clarify-coral.vercel.app/](https://clarify-coral.vercel.app/) to view the application in your browser.
+
+![Home page of Clarify](amplify/public/home.png)
+
 ## Inspiration
 
-Motivated by the challenges faced by overworked teachers and shortage of tools designed for educators in less digitally advanced settings, Clarify aims to ease the burden of grading handwritten essays and responses.  Many countries are facing a massive shortage of teachers and in my home country of Bhutan, 416 teachers have left the profession from January to May, so on average more than 83 teachers resign in one month voluntarily. Clarify's main goal is to make grading process more manageable, combat teacher attrition, and ultimately contribute to a positive shift in the education landscape using AI.
+Motivated by the challenges faced by overworked teachers and shortage of tools designed for educators in less digitally advanced settings, Clarify aims to ease the burden of grading handwritten essays and responses. Many countries are facing a massive shortage of teachers and in my home country of Bhutan, 416 teachers have left the profession from January to May, so on average more than 83 teachers resign in one month voluntarily. Clarify's main goal is to make grading process more manageable, combat teacher attrition, and ultimately contribute to a positive shift in the education landscape using AI.
 
 ## What it does
 
@@ -10,11 +16,11 @@ Clarify allows a user to upload images of say handwritten essays or response to 
 
 ## How we built it
 
-The web app was developed using next js framework with next-auth for authentication, firebase for database storage, Google cloud vision for optical character recognition,  and  Google's PaLM 2 language model to generate feedback based on transcribed text.
+The web app was developed using next js framework with next-auth for authentication, firebase for database storage, Google cloud vision for optical character recognition, and Google's PaLM 2 language model to generate feedback based on transcribed text.
 
 ## Challenges we ran into
 
-This was my first time learning how to use firebase and google cloud was so it was difficult initially figuring out how to set up the consoles and api endpoints for calls.  Another issue was figuring out how to display to the user the sequence of steps for the digital grading process from upload of images to downloading the feedback in a seamless manner.
+This was my first time learning how to use firebase and google cloud was so it was difficult initially figuring out how to set up the consoles and api endpoints for calls. Another issue was figuring out how to display to the user the sequence of steps for the digital grading process from upload of images to downloading the feedback in a seamless manner.
 
 ## Accomplishments that we're proud of
 

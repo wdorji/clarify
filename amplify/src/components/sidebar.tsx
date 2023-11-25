@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import LogoutIcon from "@mui/icons-material/Logout";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Sidebar() {
   const session = useSession();
@@ -41,13 +41,8 @@ export default function Sidebar() {
       {/* Bottom Container */}
       <div className="pb-6">
         <div className="flex flex-col items-center space-y-1 mb-5">
-          <Image
-            className="h-10 w-10 rounded-full"
-            src={session?.data?.user?.image!}
-            alt="profile-img"
-          />
           <span className="text-sm text-black font-semibold">
-            {session?.data?.user?.name!}
+            {"Logged in as " + session?.data?.user?.name!}
           </span>
         </div>
         <div

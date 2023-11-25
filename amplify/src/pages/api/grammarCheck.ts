@@ -38,13 +38,9 @@ export default async function handler(
       });
     }
 
-    console.log("bef", responseText);
-
     if (responseText == null) {
       responseText = "Sorry, we could not process the document!";
     }
-
-    console.log("aft", responseText);
 
     res.status(200).json({ status: 200, response_text: responseText });
   } catch (err) {
