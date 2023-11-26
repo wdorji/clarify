@@ -10,7 +10,7 @@ Motivated by the challenges faced by overworked teachers and shortage of tools d
 
 ## What it does
 
-Clarify allows a user to upload images of say handwritten essays or response to a question which is then transcribed to digital text using optical character recognition. For the case of an essay, the user provides the essay topic and the using Google's PaLM 2 language model, we provide feedback on how well the topic/question is addressed, grammar, and overall structure. Otherwise for a response to a question, the user provides the question and a reference answer to check how close is the student answer to the reference answer and possible improvements.
+Clarify allows a user to upload images of handwritten essays or response to a question which is then transcribed to digital text using optical character recognition. For the case of an essay, the user provides the essay topic and the using Google's PaLM 2 language model, we provide feedback on how well the topic/question is addressed, grammar, and overall structure. Otherwise for a response to a question, the user provides the question and a reference answer to check how close is the student answer to the reference answer and possible improvements.
 
 ## How we built it
 
